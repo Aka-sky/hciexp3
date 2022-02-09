@@ -1,0 +1,93 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7cd5bd2715.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/loginstyle.css">
+    <title>TheVStore | Sign Up </title>
+  </head>
+  <body>
+    <!-- <section id="head"> -->
+      <nav class="navbar navbar-expand-md">
+        <!-- Brand -->
+        <p class="navbar-brand">TheVStore</p>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto custom-link">
+          <li class="nav-item">
+          <a class="nav-link" href="/login">Log In</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/">Homepage</a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+      <!-- </section> -->
+      <section id="main">
+      <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign Up</h5>
+            <% if(msg != ""){ %>
+            <div id="erralert" class="alert alert-warning alert-dismissible fade show" role="alert">
+              <%= typeof msg != 'undefined' ? msg : "" %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <% } %>
+            <form class="form-signin" method="POST">
+              <div class="form-label-group">
+                <input type="text" id="username" name="username" class="form-control" placeholder="Username" value="<%= username %>" required autofocus>
+                <label for="username">Username</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Name" value="<%= name %>" required>
+                <label for="name">Name</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="email" id="email" name ='email' class="form-control" placeholder="Email address" value="<%= email %>">
+                <label for="email">Email address</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="password" name = "password" class="form-control" value="<%= password %>" placeholder="Password" required>
+                <label for="password">Password</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="number" id="contact" name="contact" class="form-control" placeholder="Username" value="<%= contact %>" maxlength="10" required>
+                <label for="contact">Contact No.</label>
+              </div>
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign Up</button></a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script>
+        // if(typeof msg !== 'undefined'){
+        //   $('#erralert').show();
+        // }
+      </script>
+    </body>
+  </html>
